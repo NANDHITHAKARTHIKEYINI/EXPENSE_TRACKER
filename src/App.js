@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Expenses from './components/expenses/Expenses';
 import NewExpense from './components/new_expense/NewExpense';
+import Counter from './components/Testing/Counter.jsx'
 
 const DUMMY_DATA = [
   {
@@ -26,16 +27,17 @@ const DUMMY_DATA = [
 ];
 
 function App() {
-  const [expenses, setExpenses] = useState(DUMMY_DATA);
-  const onAddNewExpense = (new_expense) => {
-    setExpenses((previous_expenses) => {
-      return [new_expense, ...previous_expenses];
-    })
-  }
+  // const [expenses, setExpenses] = useState(DUMMY_DATA);
+  // const onAddNewExpense = (new_expense) => {
+  //   setExpenses((previous_expenses) => {
+  //     return [new_expense, ...previous_expenses];
+  //   })
+  // }
   return (
     <div className="App">
-       <NewExpense onAddNewExpense={onAddNewExpense} />
-       <Expenses expenses={expenses} />
+       {/* <NewExpense onAddNewExpense={onAddNewExpense} />
+       <Expenses expenses={expenses} /> */}
+       <Counter/>
     </div>
   );
 }
